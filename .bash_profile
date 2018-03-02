@@ -11,6 +11,7 @@ unset file;
 
 # enable vi-mode on the command line
 set -o vi
+set keymap vi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
