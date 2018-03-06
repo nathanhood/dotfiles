@@ -185,3 +185,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+	name = Abe Music
+	email = abe.music@gmail.com
