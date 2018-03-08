@@ -187,5 +187,9 @@
 	insteadOf = "gist:"
 
 [user]
-	name = Abe Music
-	email = abe.music@gmail.com
+  name = Abe Music
+  email = abe.music@gmail.com
+
+[includeIf "gitdir:~/Built/"]
+  path = ~/Built/.gitconfig
+	
