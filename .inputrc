@@ -1,6 +1,6 @@
 # Set vi mode
 set editing-mode vi
-set keymap vi-command
+set keymap vi
 
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
