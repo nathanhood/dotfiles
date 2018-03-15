@@ -60,5 +60,23 @@ brew install pv
 #brew install vbindiff
 brew install zopfli
 
+# pyenv and python versions
+brew install pyenv
+brew install pyenv-virtualenvwrapper
+
+pyenv install 2.7.14
+pyenv install 3.6.4
+
+cat <<EOF
+# Add the following to ~/.extra to enable pyenv and friends
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export WORKON_HOME=$HOME/.virtualenvs
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy
+EOF
+
 # Remove outdated versions from the cellar.
 brew cleanup
