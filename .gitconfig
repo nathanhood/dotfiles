@@ -193,3 +193,5 @@
 [includeIf "gitdir:~/Built/"]
   path = ~/Built/.gitconfig
 	
+[includeIf "gitdir:~/Projects/built/"]
+  path = ~/Built/.gitconfig
