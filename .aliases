@@ -152,3 +152,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # docker and docker-compose
 alias dc='docker-compose'
+
+# pipenv
+alias prun='pipenv run'
+
