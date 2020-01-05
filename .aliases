@@ -157,3 +157,5 @@ alias dc='docker-compose'
 alias pr='pipenv run'
 alias prp='pipenv run python'
 
+# terraform
+alias tf='terraform'
