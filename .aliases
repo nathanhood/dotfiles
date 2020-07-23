@@ -24,6 +24,7 @@ alias gap="git add -p"
 alias gch="git checkout"
 alias gs="git status"
 alias gp="git push"
+alias gpl="git pull"
 alias gc="git commit -m"
 
 # Detect which `ls` flavor is in use
@@ -179,5 +180,5 @@ alias zip='tar -cvzf'
 alias cleanpyc='find . -type f -name "*.pyc" -delete'
  
 # Start day script
-alias start='$HOME/start.sh'
+alias start='$HOME/scripts/start.sh'
 
