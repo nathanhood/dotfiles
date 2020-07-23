@@ -17,7 +17,11 @@ function start-day {
 
     source $HOME/.bash_profile
 
-    daily-notes
+    if [ ! -d "$HOME/notes" ]; then
+        echo "Notes directory does not exist. Moving on..."
+    else
+        daily-notes
+    fi
 
     if [ "$1" = "fresh" ]; then
         for APP in "Google Chrome" Slack "Caret Beta" Todoist Postman; do
