@@ -1,19 +1,28 @@
 #!/usr/bin/env bash
 
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+alias b="cd .."
+alias bb="cd ../.."
+alias bbb="cd ../../.."
+alias bbbb="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+
+# Load bash config
+alias bashsource='source ~/.bash_profile'
 
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
+alias c="cd ~/Code"
+
+# Git shortcuts
 alias g="git"
 alias glog="git log --all --graph --oneline"
+alias ga="git add"
+alias gap="git add -p"
+alias gc="git checkout"
+alias gs="git status"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -28,7 +37,7 @@ fi
 alias l="ls -lF ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+alias ll="ls -laF ${colorflag}"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -156,6 +165,17 @@ alias dc='docker-compose'
 # pipenv
 alias pr='pipenv run'
 alias prp='pipenv run python'
+alias pes='pipenv shell'
 
 # terraform
 alias tf='terraform'
+
+# Compress files
+alias zip='tar -cvzf'
+
+# Clean python cache files in directory
+alias cleanpyc='find . -type f -name "*.pyc" -delete'
+ 
+# Start day script
+alias start='$HOME/start.sh'
+
