@@ -179,7 +179,4 @@ alias zip='tar -cvzf'
 
 # Clean python cache files in directory
 alias cleanpyc='find . -type f -name "*.pyc" -delete'
- 
-# Start day script
-alias start='$HOME/scripts/start.sh'
 
