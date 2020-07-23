@@ -33,7 +33,7 @@ function start-day {
 
     cd ./frontend-auth/ && git checkout -- package* && cd ../cla-miniapp/ && git checkout -- package* && cd ../built-dashboards/ && git checkout -- package* && cd ../cla-local-dev/
 
-    bash $HOME/pull-repos.sh
+		bash $HOME/scripts/pull-repos.sh
 }
 
 start-day $1
