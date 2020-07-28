@@ -44,9 +44,11 @@ export NVM_DIR="$HOME/.nvm"
 # fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if ! command -v pyenv &> /dev/null
+if command -v pyenv &> /dev/null
 then
 	eval "$(pyenv init -)"
+else
+	echo "pyenv command not found. could not eval"
 fi
 
 # For compilers to find zlib (install via brew install zlib for pyenv):
