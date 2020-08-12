@@ -29,6 +29,8 @@ alias gc="git commit -m"
 alias gd="git diff"
 alias gf="git fetch"
 alias gb="git branch"
+alias gst="git stash"
+alias gm="git merge"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
