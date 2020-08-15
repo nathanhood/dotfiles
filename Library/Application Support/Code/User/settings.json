@@ -1,20 +1,78 @@
 {
-    "editor.cursorBlinking": "solid",
-    "editor.detectIndentation": true,
-    "editor.fontSize": 18,
-    "editor.insertSpaces": true,
-    "editor.renderWhitespace": "all",
-    "editor.tabSize": 4,
-    "editor.disableTranslate3d": true,
-
-    "files.trimTrailingWhitespace": true,
-
-    "vim.hlsearch": true,
-
-    "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "window.zoomLevel": 0,
-
-    "workbench.editor.enablePreview": false,
+    "python.pythonPath": "/Users/nathanhood/.virtualenvs/collateral-service-o0G1XQf7/bin/python",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "600",
+    "workbench.fontAliasing": "auto",
+    "editor.fontFamily": "Monaco, 'Source Code Pro', Menlo,  'Courier New', monospace",
+    "python.linting.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "vim.useSystemClipboard": true,
+    "editor.lineHeight": 24,
     "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "Dark Purple",
+    "python.formatting.provider": "yapf",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "vscode_custom_css.imports": [
+        "file:///Users/nathanhood/vscode/synthwave84.css"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "C# Purple",
+            "value": "#68217A"
+        },
+        {
+            "name": "Gatsby Purple",
+            "value": "#639"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "diffEditor.renderSideBySide": true,
+    "workbench.editor.showTabs": true,
     "workbench.startupEditor": "newUntitledFile"
 }
