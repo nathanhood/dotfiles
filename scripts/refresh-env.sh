@@ -14,7 +14,7 @@ LIB_DEV=$mount_common make restart-integrated
 
 sleep 8
 
-built db:seed --regression
-make recreate-all
+built db:seed --regression -n
+make recreate-dbs
 
 cd -
