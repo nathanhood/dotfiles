@@ -30,8 +30,14 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
+BASH_COMPLETION_COMPAT_DIR_EXPECTED="/usr/local/etc/bash_completion.d"
 if [ -r "/usr/local/etc/profile.d/bash_completion.sh" ]; then
-  export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+	# $BASH_COMPLETION_COMPAT_DIR is set to a readonly variable by brew bash-completion
+	# so I check if it's already set to prevent an annoying readonly warning in the terminal
+	# /usr/local/Cellar/bash-completion/1.3_3/etc/bash_completion
+	if [ "$BASH_COMPLETION_COMPAT_DIR" != "$BASH_COMPLETION_COMPAT_DIR_EXPECTED" ]; then
+		export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d";
+	fi;
   source "/usr/local/etc/profile.d/bash_completion.sh"
 elif which brew &> /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 	source "$(brew --prefix)/etc/bash_completion";
