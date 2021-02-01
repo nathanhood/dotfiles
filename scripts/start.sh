@@ -15,8 +15,6 @@ function start-day {
     # Pre-cache sudo credentials for 15min
     # sudo -v
 
-    source $HOME/.bash_profile
-
     if [ ! -d "$HOME/notes" ]; then
         echo "Notes directory does not exist. Moving on..."
     else
@@ -29,11 +27,13 @@ function start-day {
         done
     fi   
 
-    cd $HOME/BuiltSource/
+    if [ "$1" != "simple" ]; then
+        cd $HOME/BuiltSource/
 
-    cd ./frontend-auth/ && git checkout -- package* && cd ../cla-miniapp/ && git checkout -- package* && cd ../built-dashboards/ && git checkout -- package* && cd ../cla-local-dev/
+        cd ./frontend-auth/ && git checkout -- package* && cd ../cla-miniapp/ && git checkout -- package* && cd ../built-dashboards/ && git checkout -- package* && cd ../cla-local-dev/
 
-		bash $HOME/scripts/pull-repos.sh
+        bash $HOME/scripts/pull-repos.sh
+    fi
 }
 
 start-day $1
