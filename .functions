@@ -217,6 +217,7 @@ function note {
 
   cd $HOME/notes/scripts/note
 
+	# Check for core python package as a way to tell if pipenv sync was run
 	if [ "$(pipenv run pip list | grep typer | awk '{print $1}')" != 'typer' ]; then
 		pipenv sync
 	fi

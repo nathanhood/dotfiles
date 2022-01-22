@@ -7,7 +7,7 @@ function daily-notes {
 
     if [ ! -f "$notes_file" ]; then
         touch "$notes_file"
-        echo -e "# $current_date Daily Notes\n\n## Retrospective\n\n\n## Goals for Today\n\n\n## Stand Up\nWhat did I do?\n\nWhat will I do?\n\nAny blockers?\n\nParking lot\n\n## General Notes\n" > "$notes_file"
+        echo -e "# $current_date Daily Notes\n\n## Retrospective\n\n\n## Goals for Today\n\n\n## Stand Up\nWhat did I do?\n\nWhat will I do?\n\nAny blockers?\n\nParking lot\n\nNotes\n\n\n## General Notes\n" > "$notes_file"
     fi
 }
 
