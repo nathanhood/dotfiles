@@ -205,6 +205,22 @@ function macns() {
 
 # Search notes
 function notes {
-    ack "$1" -i $HOME/notes/
+  ack "$1" -i $HOME/notes/
 }
 
+# Create note file from template
+function note {
+  if [ ! -d "$HOME/notes" ]; then
+		echo 'Need to install notes repo'
+		return 1
+	fi
+
+  cd $HOME/notes/scripts/note
+
+	if [ "$(pipenv run pip list | grep typer | awk '{print $1}')" != 'typer' ]; then
+		pipenv sync
+	fi
+
+	pipenv run python main.py $@
+	cd -
+}
