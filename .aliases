@@ -24,6 +24,15 @@ alias gap="git add -p"
 alias gch="git checkout"
 alias gs="git status"
 alias gp="git push"
+
+function gpnew() {
+	# Allowing this function to be here instead of
+  # .functions for grouping with other git aliases
+  branch_name = git branch --show-current
+
+  git push --set-upstream origin $branch_name
+}
+
 alias gpl="git pull"
 alias gc="git commit -m"
 alias gd="git diff"
