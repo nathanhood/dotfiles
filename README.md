@@ -6,6 +6,15 @@
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
+## Fresh Computer Setup
+- Switch to bash - `chsh -s /bin/bash`
+  - Or uncomment the installation of bash in `brew.sh` below
+- Install [homebrew](https://brew.sh)
+- Run `brew.sh` - See "Install Homebrew formulae" below
+  - Determine which python versions you want to install and update `brew.sh`
+- Customize `.extra` with any common computer-specific settings
+- Install dotfiles - See section below for bootstrap command
+
 ### Using Git and the bootstrap script
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
@@ -82,6 +91,20 @@ When setting up a new Mac, you may want to install some common [Homebrew](https:
 ```
 
 Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
+
+After running `brew.sh`, make sure to add both brew and pyenv to your `.extra` file. Something like this:
+
+```bash
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Pyenv PATH - An expanded version of this block will print when running brew.sh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export WORKON_HOME=$HOME/.virtualenvs
+eval "$(pyenv init -)"
+```
 
 ## Feedback
 
