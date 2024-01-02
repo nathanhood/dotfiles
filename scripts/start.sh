@@ -12,7 +12,7 @@ function start-day {
         # python $HOME/notes/scripts/note/main.py daily
     fi
 
-    for APP in "Google Chrome" Slack "Caret Beta" Postman; do
+    for APP in Twingate "Google Chrome" Slack "Nota" Postman; do
         open -a "$APP"
     done
 }
