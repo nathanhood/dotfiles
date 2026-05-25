@@ -65,7 +65,7 @@ brew install git
 brew install pyenv
 brew install pyenv-virtualenvwrapper
 
-pyenv install 3.11.1
+pyenv install 3.11.3
 
 cat <<EOF
 # Add the following to ~/.extra to enable pyenv and friends
