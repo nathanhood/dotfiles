@@ -24,6 +24,7 @@ alias gap="git add -p"
 alias gch="git checkout"
 alias gs="git status"
 alias gp="git push"
+alias gr="git restore"
 
 function gpnew() {
 	# Allowing this function to be here instead of
