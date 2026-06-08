@@ -73,6 +73,7 @@ if tput setaf 1 &> /dev/null; then
 	magenta=$(tput setaf 5);
 	cyan=$(tput setaf 6);
 	white=$(tput setaf 7);
+	amber=$(tput setaf 214);
 else
 	bold='';
 	reset="\e[0m";
@@ -84,13 +85,14 @@ else
 	magenta="\e[0;35m";
 	cyan="\e[0;36m";
 	white="\e[0;37m";
+	amber="\e[38;5;214m";
 fi;
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
 	userStyle="${red}";
 else
-	userStyle="${yellow}";
+	userStyle="${amber}";
 fi;
 
 # Highlight the hostname when connected via SSH.
