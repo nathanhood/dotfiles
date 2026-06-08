@@ -12,6 +12,13 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
+
+	# Install iTerm2 Cobalt2 Dynamic Profile (auto-loaded by iTerm2, no manual import needed)
+	local iterm2_profiles_dir="${HOME}/Library/Application Support/iTerm2/DynamicProfiles"
+	mkdir -p "${iterm2_profiles_dir}"
+	cp "$(dirname "${BASH_SOURCE}")/init/cobalt2-iterm2-dynamic-profile.json" "${iterm2_profiles_dir}/cobalt2.json"
+	echo "Installed Cobalt2 iTerm2 Dynamic Profile."
+
 	source ~/.bash_profile;
 }
 
