@@ -50,12 +50,12 @@ alias wargs="xargs -I '{}'"
 # Detect which `ls` flavor is in use
 if ls --version > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
-	# di=cyan dirs, ln=magenta symlinks, ex=green executables, archives=red, media=magenta, pipes/devices=yellow
-	export LS_COLORS='no=00:fi=00:di=01;36:ln=01;35:pi=33:so=01;32:do=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=00;35:*.jpeg=00;35:*.gif=00;35:*.bmp=00;35:*.pbm=00;35:*.pgm=00;35:*.ppm=00;35:*.tga=00;35:*.xbm=00;35:*.xpm=00;35:*.tif=00;35:*.tiff=00;35:*.png=00;35:*.mov=00;35:*.mpg=00;35:*.mpeg=00;35:*.avi=00;35:*.fli=00;35:*.gl=00;35:*.dl=00;35:*.xcf=00;35:*.xwd=00;35:*.ogg=00;35:*.mp3=00;35:*.wav=00;35:'
+	# di=blue dirs, ln=magenta symlinks, ex=green executables, archives=red, media=magenta, pipes/devices=yellow
+	export LS_COLORS='no=00:fi=00:di=01;34:ln=01;35:pi=33:so=01;32:do=01;35:bd=01;33:cd=01;33:or=01;31:mi=01;31:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=00;35:*.jpeg=00;35:*.gif=00;35:*.bmp=00;35:*.pbm=00;35:*.pgm=00;35:*.ppm=00;35:*.tga=00;35:*.xbm=00;35:*.xpm=00;35:*.tif=00;35:*.tiff=00;35:*.png=00;35:*.mov=00;35:*.mpg=00;35:*.mpeg=00;35:*.avi=00;35:*.fli=00;35:*.gl=00;35:*.dl=00;35:*.xcf=00;35:*.xwd=00;35:*.ogg=00;35:*.mp3=00;35:*.wav=00;35:'
 else # macOS `ls`
 	colorflag="-G"
-	# dirs=bold cyan, symlinks=bold magenta, executables=bold green, pipes=bold yellow, sockets=bold green
-	export LSCOLORS='GxFxCxDxCxhxhxhxhxhxhx'
+	# dirs=bold blue, symlinks=bold magenta, executables=bold green, pipes=bold yellow, sockets=bold green
+	export LSCOLORS='ExFxCxDxCxhxhxhxhxhxhx'
 fi
 
 # List all files colorized in long format
