@@ -192,3 +192,6 @@
 
 [includeIf "gitdir:~/BuiltSource/"]
   path = ~/Built/.gitconfig
+
+[includeIf "gitdir:~/recharge/"]
+  path = ~/recharge/.gitconfig
