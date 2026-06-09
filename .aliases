@@ -55,7 +55,7 @@ if ls --version > /dev/null 2>&1; then # GNU `ls`
 else # macOS `ls`
 	colorflag="-G"
 	# dirs=lightblue (non-bold), symlinks=bold magenta, executables=bold green, pipes=bold yellow, sockets=bold green
-	export LSCOLORS='exFxCxDxCxhxhxhxhxhxhx'
+	export LSCOLORS='ExFxCxDxCxhxhxhxhxhxhx'
 fi
 
 # List all files colorized in long format
