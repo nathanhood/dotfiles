@@ -70,6 +70,7 @@ if tput setaf 1 &> /dev/null; then
 	green=$(tput setaf 2);
 	yellow=$(tput setaf 3);
 	blue=$(tput setaf 4);
+	lightblue=$(tput setaf 75);
 	magenta=$(tput setaf 5);
 	cyan=$(tput setaf 6);
 	white=$(tput setaf 7);
@@ -82,6 +83,7 @@ else
 	green="\e[0;32m";
 	yellow="\e[0;33m";
 	blue="\e[0;34m";
+	lightblue="\e[38;5;75m";
 	magenta="\e[0;35m";
 	cyan="\e[0;36m";
 	white="\e[0;37m";
@@ -99,7 +101,7 @@ fi;
 if [[ "${SSH_TTY}" ]]; then
 	hostStyle="${bold}${red}";
 else
-	hostStyle="${blue}";
+	hostStyle="${lightblue}";
 fi;
 
 # Set the terminal title and prompt.
@@ -110,7 +112,7 @@ PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${magenta}\]\" \"\[${blue}\]\")"; # Git repository details
+PS1+="\$(prompt_git \"\[${white}\] on \[${magenta}\]\" \"\[${lightblue}\]\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
