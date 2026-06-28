@@ -3,6 +3,7 @@
     {
       "Name": "Cobalt2",
       "Guid": "cobalt2-default-terminalcolors",
+      "Custom Directory": "Recycle",
       "Background Color": {
         "Color Space": "sRGB",
         "Red Component": 0,
