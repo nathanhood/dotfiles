@@ -190,8 +190,5 @@
   name = Nathan Hood
   email = nathanhood@me.com
 
-[includeIf "gitdir:~/BuiltSource/"]
-  path = ~/Built/.gitconfig
-
 [includeIf "gitdir:~/recharge/"]
   path = ~/recharge/.gitconfig
