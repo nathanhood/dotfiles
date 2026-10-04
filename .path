@@ -8,3 +8,5 @@ fi
 # User-local binaries: Poetry, Claude Code native install (self-updating).
 # Must come after brew shellenv so ~/.local/bin wins over Homebrew shims.
 export PATH="$HOME/.local/bin:$PATH"
+
+export PATH="$HOME/.turso:$PATH"

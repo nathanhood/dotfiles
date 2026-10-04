@@ -40,6 +40,7 @@ brew install nvm
 # Python tooling
 brew install pyenv
 brew install pyenv-virtualenvwrapper
+brew install uv
 brew install asdf
 
 # Database
